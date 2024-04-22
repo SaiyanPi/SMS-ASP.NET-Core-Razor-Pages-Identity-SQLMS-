@@ -1,0 +1,94 @@
+﻿@page
+@model SMS.Pages.Classroom.IndexModel
+
+@* <table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th style="background-color:darkgrey">Class</th>
+            <th style="background-color:darkgrey">Class Teacher</th>
+            <th style="background-color:darkgrey">Class Captain</th>
+            <th style="background-color:darkgrey">Class First</th>
+            <th style="background-color:darkgrey">Class Second</th>
+            <th style="background-color:darkgrey">Class Third</th>
+            <th style="background-color:darkgrey">Total Students</th>
+            <th style="background-color:darkgrey">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model.Classes)
+        {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.ClassTeacher</td>
+                <td>@obj.ClassCaptain</td>
+                <td>@obj.ClassFirst</td>
+                <td>@obj.ClassSecond</td>
+                <td>@obj.ClassThird</td>
+                <td>@obj.TotalStudent</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-1">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-page="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-1">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> *@
+<div class="container">
+    <div class="text-center mb-5">
+        <h3>ALL CLASSES</h3>
+        <p class="lead">Eros ante urna tortor aliquam nisl magnis quisque hac</p>
+        <a asp-page="CreateClass" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> &nbsp;
+            Create New Class
+        </a>
+        <a asp-page="ClassTwo/Index" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> &nbsp;
+            view class 2
+        </a>
+    </div>
+    
+    @foreach (var obj in Model.Classes)
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                    <div class="d-flex flex-column flex-lg-row">
+                    <span class="avatar avatar-text rounded-5 me-4 mb-2">@obj.Id</span>
+                        <div class="row flex-fill">
+                            <div class="col-sm-5">
+                            <h4 class="h5 text-dark">Class @obj.Id</h4>
+                           <span class="badge bg-success">Class Teach| @obj.ClassTeacher</span>
+                            </div>
+                          
+                            <div class="col-sm-4 py-2 ">
+                                <ul>
+                                <li><span class="badge bg-secondary"><i style="font-size: 15px;">1st</i>&ensp; Student | @obj.ClassFirst</span></li>
+                                <li><span class="badge bg-secondary"><i style="font-size: 15px;">2nd</i>&ensp; Student | @obj.ClassSecond</span></li>
+                                <li><span class="badge bg-secondary"><i style="font-size: 15px;">3rd</i>&ensp; Student | @obj.ClassThird</span></li>
+                                <li><span class="badge bg-secondary"><i style="font-size: 12px;">Class Cap |</i>&ensp; <b style="font-size: 15px;">@obj.ClassCaptain</b></span></li>
+                                <li><span class="badge bg-secondary"><i style="font-size: 12px;">Total Students |</i>&ensp; <b style="font-size: 15px;">@obj.TotalStudent</b></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3 text-lg-end">
+                                <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-1">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a asp-page="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-1">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                                <a asp-page="Classroom/ClassTwo/Index" class="btn btn-success mx-1">
+                                <i class="bi bi-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    }
+</div>

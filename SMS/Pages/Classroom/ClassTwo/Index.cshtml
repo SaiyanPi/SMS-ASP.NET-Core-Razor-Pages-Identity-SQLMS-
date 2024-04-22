@@ -1,0 +1,59 @@
+﻿@page
+@model SMS.Pages.Classroom.ClassTwo.IndexModel
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card mb-4">
+    <img src="https://st2.depositphotos.com/2931363/6569/i/450/depositphotos_65699901-stock-photo-black-man-keeping-arms-crossed.jpg" alt="John" style="width:100%">
+    <h3>John Doe</h3>
+    <p class="title">Class Teacher</p>
+
+    
+
+    <div class="pos"
+        <p>1st Student | @foreach (var item in Model.Classtwo.Where(u => u.Rollno.Equals(1))) { @item.FullName }</p>
+        <p>2nd Student | @foreach (var item in Model.Classtwo.Where(u => u.Rollno.Equals(2))) { @item.FullName }</p>
+        <p>3rd Student | @foreach (var item in Model.Classtwo.Where(u => u.Rollno.Equals(3))) { @item.FullName }</p>
+        <p>Class Captain | @foreach (var item in Model.Classtwo.Where(u => u.Role.Equals("Captain"))) { @item.FullName }</p>     
+        <p>Total Student | @Model.Classtwo.Count()</p>
+   
+    </div>
+    
+</div>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th style="background-color:darkgrey">Full Name</th>
+            <th style="background-color:darkgrey">Roll Number</th>
+            <th style="background-color:darkgrey">Guardian Name</th>
+            <th style="background-color:darkgrey">Address</th>
+            <th style="background-color:darkgrey">Contact</th>
+            <th style="background-color:darkgrey">Role</th>
+            <th style="background-color:darkgrey">Action</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.Classtwo)
+        {
+            <tr>
+                <td>@obj.FullName</td>
+                <td>@obj.Rollno</td>
+                <td>@obj.GuardianName</td>
+                <td>@obj.Address</td>
+                <td>@obj.Contact</td>
+                <td>@obj.Role</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-page="Edit" asp-route-id="@obj.Rollno" class="btn btn-primary mx-1">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-page="Delete" asp-route-id="@obj.Rollno" class="btn btn-danger mx-1">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
