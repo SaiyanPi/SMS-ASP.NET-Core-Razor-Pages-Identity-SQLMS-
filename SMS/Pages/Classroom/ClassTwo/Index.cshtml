@@ -11,15 +11,30 @@
     
 
     <div class="pos"
-        <p>1st Student | @foreach (var item in Model.Classtwo.Where(u => u.Rollno.Equals(1))) { @item.FullName }</p>
-        <p>2nd Student | @foreach (var item in Model.Classtwo.Where(u => u.Rollno.Equals(2))) { @item.FullName }</p>
-        <p>3rd Student | @foreach (var item in Model.Classtwo.Where(u => u.Rollno.Equals(3))) { @item.FullName }</p>
-        <p>Class Captain | @foreach (var item in Model.Classtwo.Where(u => u.Role.Equals("Captain"))) { @item.FullName }</p>     
-        <p>Total Student | @Model.Classtwo.Count()</p>
+        <p>1st Student | @foreach (var item in Model.Class2.Where(u => u.Rollno.Equals(1))) { @item.FullName }</p>
+        <p>2nd Student | @foreach (var item in Model.Class2.Where(u => u.Rollno.Equals(2))) { @item.FullName }</p>
+        <p>3rd Student | @foreach (var item in Model.Class2.Where(u => u.Rollno.Equals(3))) { @item.FullName }</p>
+        <p>Class Captain | @foreach (var item in Model.Class2.Where(u => u.Role.Equals("Captain"))) { @item.FullName }</p>     
+        <p>Total Student | @Model.Class2.Count()</p>
    
     </div>
     
 </div>
+<form>
+    <p>
+        <select asp-for="StudentRollno" asp-items="Model.RollNo">
+        <option value="">(Filter)All Rollno</option>
+        </select>
+        <br />
+        @* Search by Student's Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" class="btn btn-success" value="Filter" /> *@
+        <div class="input-group">
+            <input type="text" asp-for="SearchString"  class="form-control rounded" placeholder="By Student's Name"/>
+            <button type="submit" class="btn btn-outline-success" data-mdb-ripple-init>Filter</button>
+        </div>
+    </p>
+</form>
+<hr />
 <table class="table table-bordered table-striped" style="width:100%">
     <thead>
         <tr>

@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Pages\\Classroom\\ClassTwo\\Index.cshtml",
               "ToolTip": "C:\\Users\\zlams\\source\\SMS with asp.net core razor pages and core identity\\SMS\\Pages\\Classroom\\ClassTwo\\Index.cshtml",
               "RelativeToolTip": "Pages\\Classroom\\ClassTwo\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAEAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwBYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-21T13:28:24.605Z",
               "EditorCaption": ""
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "Pages\\Classroom\\ClassTwo\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\zlams\\source\\SMS with asp.net core razor pages and core identity\\SMS\\Pages\\Classroom\\ClassTwo\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Classroom\\ClassTwo\\Index.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAswCcAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T13:28:26.902Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "Model\\Class2\\Class2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T13:26:55.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T13:26:55.28Z"
             }
           ]
         }

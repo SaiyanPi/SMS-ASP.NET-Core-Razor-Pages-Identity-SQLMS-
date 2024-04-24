@@ -286,3 +286,4 @@ C:\Users\zlams\source\SMS with asp.net core razor pages and core identity\SMS\bi
 C:\Users\zlams\source\SMS with asp.net core razor pages and core identity\SMS\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\zlams\source\SMS with asp.net core razor pages and core identity\SMS\obj\Debug\net6.0\scopedcss\Pages\Classroom\Index.cshtml.rz.scp.css
 C:\Users\zlams\source\SMS with asp.net core razor pages and core identity\SMS\obj\Debug\net6.0\scopedcss\Pages\Classroom\ClassTwo\Index.cshtml.rz.scp.css
+C:\Users\zlams\source\SMS with asp.net core razor pages and core identity\SMS\obj\Debug\net6.0\SMS.sourcelink.json
